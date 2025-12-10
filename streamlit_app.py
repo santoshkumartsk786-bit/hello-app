@@ -1,16 +1,15 @@
-# ============================
-# GOOGLE COLAB VERSION
-# ============================
-
-print("Welcome to the Name App!")
-name = input("What is your name? ")
-
-print(f"Hello, {name}! Nice to meet you 😊")
 import streamlit as st
 
-st.title("Simple Name App")
+st.set_page_config(page_title="Name App")
 
-name = st.text_input("What is your name?")
+st.title("Hello! 👋")
 
-if name:
-    st.success(f"Hello, {name}! Nice to meet you 😊")
+st.write("Please enter your name below:")
+
+name = st.text_input("Your Name")
+
+if st.button("Submit"):
+    if name.strip() == "":
+        st.error("Please type a name.")
+    else:
+        st.success(f"Hello, {name}! Nice to meet you 😊")
