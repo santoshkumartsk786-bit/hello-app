@@ -12,4 +12,4 @@ if st.button("Submit"):
     if name.strip() == "":
         st.error("Please type a name.")
     else:
-        st.success(f"Hello, {name}! Nice to meet you 😊")
+        st.success(f"Hello, {name}! Nice to meet you. how are you doing😊")
